@@ -35,22 +35,32 @@
 using namespace overlay;
 #endif
 
-enum {
-    /* gralloc usage bits indicating the type
-     * of allocation that should be used */
+/*enum {
     GRALLOC_USAGE_PRIVATE_ADSP_HEAP = GRALLOC_USAGE_PRIVATE_0,
     GRALLOC_USAGE_PRIVATE_EBI_HEAP = GRALLOC_USAGE_PRIVATE_1,
     GRALLOC_USAGE_PRIVATE_SMI_HEAP = GRALLOC_USAGE_PRIVATE_2,
     GRALLOC_USAGE_PRIVATE_SYSTEM_HEAP = GRALLOC_USAGE_PRIVATE_3,
-    /* Set this for allocating uncached memory (using O_DSYNC)
-     * cannot be used with the system heap */
     GRALLOC_USAGE_PRIVATE_UNCACHED = 0x00010000,
-    /* This flag needs to be set when using a system heap
-     * from ION. If not set, the system heap is assumed
-     * to be coming from ashmem
-     */
     GRALLOC_USAGE_PRIVATE_ION = 0x00020000,
+};*/
+
+//POMINIĘTE ENUMY, FIXED BY MARCIN1147
+enum {
+    GRALLOC_USAGE_PRIVATE_ADSP_HEAP       =       GRALLOC_USAGE_PRIVATE_0,
+    GRALLOC_USAGE_PRIVATE_UI_CONTIG_HEAP  =       GRALLOC_USAGE_PRIVATE_1,
+    GRALLOC_USAGE_PRIVATE_SMI_HEAP        =       GRALLOC_USAGE_PRIVATE_2,
+    GRALLOC_USAGE_PRIVATE_SYSTEM_HEAP     =       GRALLOC_USAGE_PRIVATE_3,
+    GRALLOC_USAGE_PRIVATE_IOMMU_HEAP      =       0x01000000,
+    GRALLOC_USAGE_PRIVATE_MM_HEAP         =       0x02000000,
+    GRALLOC_USAGE_PRIVATE_WRITEBACK_HEAP  =       0x04000000,
+    GRALLOC_USAGE_PRIVATE_CAMERA_HEAP     =       0x08000000,
+    GRALLOC_USAGE_PRIVATE_UNCACHED        =       0x00010000,
+    GRALLOC_USAGE_PRIVATE_ION             =       0x00020000,
 };
+enum {
+    GRALLOC_MODULE_PERFORM_CREATE_HANDLE_FROM_BUFFER = 0x080000001,
+};
+//KONIEC ZMIAN
 
 
 enum {
