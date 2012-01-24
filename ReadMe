@@ -1,5 +1,5 @@
 Copy All this file into cm9 build tree
 open terminal
-run . build/envsetup.sh && brunch tass
+run . build/envsetup.sh && brunch tass or gio
 
-SAMSUNG GALAXY MINI AND GIO CONFIG CYANOGENMOD 9 BUILDING
+SAMSUNG GALAXY MINI & GIO CONFIG CYANOGENMOD 9 BUILDING
